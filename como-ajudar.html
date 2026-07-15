@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Doe, seja voluntário, torne-se parceiro ou ajude a divulgar essa causa." />
+  <title>Como ajudar | Patrulha da Inclusão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topo">
+  <div class="container nav">
+    <a class="marca" href="index.html" aria-label="Página inicial">
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre nós</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="noticias.html">Notícias</a>
+      <a href="como-ajudar.html" class="pagina-ativa">Como ajudar</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <a class="btn btn-doar" href="como-ajudar.html" class="pagina-ativa">♥ Doe agora</a>
+  </div>
+</header>
+
+<main>
+  <section class="pagina-hero">
+    <div class="container">
+      <span class="mini-titulo">Faça parte</span>
+      <h1>Como ajudar</h1>
+      <p>Doe, seja voluntário, torne-se parceiro ou ajude a divulgar essa causa.</p>
+    </div>
+  </section>
+
+<section class="secao">
+  <div class="container grid-3">
+    <article class="card-ajuda"><div class="icone-pagina">♥</div><h3>Faça uma doação</h3><p>Contribua com qualquer valor para apoiar atividades, materiais, transporte e atendimento às famílias.</p><a class="btn btn-primario" href="contato.html">Quero doar</a></article>
+    <article class="card-ajuda"><div class="icone-pagina">🙋</div><h3>Seja voluntário</h3><p>Compartilhe seu tempo, conhecimento ou talento em eventos, oficinas e ações comunitárias.</p><a class="btn btn-secundario" href="contato.html">Quero participar</a></article>
+    <article class="card-ajuda"><div class="icone-pagina">🤝</div><h3>Seja parceiro</h3><p>Empresas e instituições podem apoiar projetos, campanhas e oportunidades para a comunidade.</p><a class="btn btn-secundario" href="contato.html">Quero ser parceiro</a></article>
+  </div>
+</section>
+<section class="secao secao-clara">
+  <div class="container grid-2">
+    <div><h2 class="titulo-secao">Toda ajuda gera impacto</h2><p class="texto-secao">Além de doações financeiras, você pode contribuir divulgando campanhas, arrecadando itens, cedendo espaços, oferecendo serviços ou conectando a ONG a novos apoiadores.</p></div>
+    <div class="imagem-interna"><img src="assets/foto-principal.png" alt="Equipe e participantes da organização"></div>
+  </div>
+</section>
+
+</main>
+
+  <footer id="contato">
+    <div class="container rodape-grid">
+      <div class="rodape-marca">
+        <img src="assets/logo.jpeg" alt="Logo Patrulha da Inclusão" />
+      </div>
+
+      <div>
+        <h3>Links rápidos</h3>
+        <div class="links-duplos">
+          <a href="sobre.html">Sobre nós</a>
+          <a href="como-ajudar.html">Como ajudar</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="como-ajudar.html">Seja voluntário</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <p>☎ (22) 99242-7133</p>
+        <p>☎ (22) 99871-7575</p>
+        <p>✉ patrulhadainclusaooficial@gmail.com</p>
+        <p>◎ @patrulha_da_inclusao_</p>
+      </div>
+
+      <div>
+        <h3>Siga-nos</h3>
+        <div class="redes">
+          <a href="https://www.instagram.com/patrulha_da_inclusao/" aria-label="Instagram"><img src="assets/logo-insta.png" alt=""></a>
+          <a href="https://www.youtube.com/@patrulha_da_inclusao" aria-label="Facebook"><img src="assets/logo-face.png" alt=""></a>
+          <a href="#" aria-label="YouTube"><img src="assets/logo-youtube.png" alt=""></a>
+        </div>
+        <p class="assinatura">Juntos, somos<br>mais fortes! ♡</p>
+      </div>
+    </div>
+
+    <div class="barra-final">
+      <div class="container">
+        <span>© 2026 Patrulha da Inclusão. Todos os direitos reservados.</span>
+        <span>Desenvolvido com ♡ para transformar vidas.</span>
+      </div>
+    </div>
+  </footer>
+<script>
+  const botao = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  botao.addEventListener('click', () => {
+    const aberto = menu.classList.toggle('aberto');
+    botao.setAttribute('aria-expanded', aberto);
+  });
+</script>
+
+</body>
+</html>

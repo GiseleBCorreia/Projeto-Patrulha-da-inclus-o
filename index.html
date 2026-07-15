@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Patrulha da Inclusão — inclusão que transforma vidas." />
+  <title>Patrulha da Inclusão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topo">
+    <div class="container nav">
+      <a class="marca" href="index.html" aria-label="Página inicial">      
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav class="menu">
+        <a class="ativo" href="index.html">Início</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="como-ajudar.html">Como ajudar</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-doar" href="#doacao">Doe agora</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="decor decor-coracao">♡</div>
+
+      <div class="container hero-grid">
+        <div class="hero-conteudo">
+          <span class="selo">JUNTOS, SOMOS MAIS FORTES!</span>
+
+          <h1>
+            INCLUSÃO
+            <span>que transforma</span>
+            VIDAS!
+          </h1>
+
+          <p>
+            Promovemos inclusão, respeito e oportunidades para crianças,
+            jovens e famílias construírem um futuro com mais dignidade e igualdade.
+          </p>
+
+          <div class="acoes">
+            <a class="btn btn-primario" href="projetos.html">Conheça nossos projetos</a>
+            <a class="btn btn-secundario" href="como-ajudar.html">Como ajudar</a>
+          </div>
+        </div>
+
+        <div class="galeria" aria-label="Fotos da organização">
+          <div class="foto-principal">
+            <img src="assets/imagem1.jpeg" alt="Equipe e crianças reunidas em atividade ao ar livre" />
+          </div>
+
+          <div class="fotos-laterais">
+            <img src="assets/imagem2.jpeg" alt="Integrantes da organização" />
+            <img src="assets/imagem3.jpeg" alt="Equipe da organização" />
+            <img src="assets/imagem4.jpeg" alt="Jovens participantes do projeto" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faixa-doacao" id="doacao">
+      <div class="container faixa-conteudo">
+        <div class="icone-coracao">♡</div>
+        <div>
+          <h2>Sua doação pode transformar vidas!</h2>
+          <p>Qualquer valor faz a diferença. Juntos, podemos construir um futuro com mais inclusão e oportunidades.</p>
+        </div>
+        <a class="btn btn-primario" href="https://wa.me/" target="_blank" rel="noopener">Faça sua doação</a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container rodape-grid">
+      <div class="rodape-marca">
+        <img src="assets/logo.jpeg" alt="Logo Patrulha da Inclusão" />
+      </div>
+
+      <div>
+        <h3>Links rápidos</h3>
+        <div class="links-duplos">
+          <a href="sobre.html">Sobre nós</a>
+          <a href="como-ajudar.html">Como ajudar</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="como-ajudar.html">Seja voluntário</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <p>☎ (22) 99242-7133</p>
+        <p>☎ (22) 99871-7575</p>
+        <p>✉ patrulhadainclusaooficial@gmail.com</p>
+        <p>◎ @patrulha_da_inclusao_</p>
+      </div>
+
+      <div>
+        <h3>Siga-nos</h3>
+        <div class="redes">
+          <a href="https://www.instagram.com/patrulha_da_inclusao/" aria-label="Instagram"><img src="assets/logo-insta.png" alt=""></a>
+          <a href="https://www.youtube.com/@patrulha_da_inclusao" aria-label="Facebook"><img src="assets/logo-face.png" alt=""></a>
+          <a href="#" aria-label="YouTube"><img src="assets/logo-youtube.png" alt=""></a>
+        </div>
+        <p class="assinatura">Juntos, somos<br>mais fortes! ♡</p>
+      </div>
+    </div>
+
+    <div class="barra-final">
+      <div class="container">
+        <span>© 2026 Patrulha da Inclusão. Todos os direitos reservados.</span>
+        <span>Desenvolvido com ♡ para transformar vidas.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const botao = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    botao.addEventListener('click', () => {
+      const aberto = menu.classList.toggle('aberto');
+      botao.setAttribute('aria-expanded', aberto);
+    });
+  </script>
+</body>
+</html>
