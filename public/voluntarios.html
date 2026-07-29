@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Conheça os voluntários da Patrulha da Inclusão."
+  >
+
+  <title>Voluntários | Patrulha da Inclusão</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Pacifico&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topo">
+    <div class="container nav">
+      <a
+        class="marca"
+        href="index.html"
+        aria-label="Página inicial"
+      ></a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntarios.html" class="pagina-ativa">
+          Voluntários
+        </a>
+        <a href="como-ajudar.html">Como ajudar</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-doar" href="como-ajudar.html">
+        Doe agora
+      </a>
+    </div>
+  </header>
+
+  <main class="pagina-voluntarios">
+    <section class="hero-voluntarios">
+      <div class="container hero-voluntarios-conteudo">
+        <span class="hero-voluntarios-etiqueta">
+          Voluntários
+        </span>
+
+        <h2>Pessoas que transformam vidas</h2>
+
+        <p>
+          Conheça os voluntários que dedicam seu tempo, talento e carinho
+          <br>
+          para construir uma sociedade mais inclusiva e acolhedora.
+        </p>
+
+<div class="acoes-admin">
+<button
+  id="abrirCadastro"
+  class="btn-cadastro-flutuante"
+  type="button"
+  aria-label="Adicionar novo voluntário"
+  title="Adicionar novo voluntário"
+>
+  +
+</button>
+
+  <button id="sairAdmin" class="btn-sair-admin" type="button" hidden>
+    Encerrar sessão
+  </button>
+</div>
+
+<p id="statusAdmin" class="status-admin" aria-live="polite"></p>
+
+        <p
+          id="statusAdmin"
+          class="status-admin"
+          aria-live="polite"
+        ></p>
+      </div>
+    </section>
+
+    <section class="secao-equipe">
+      <div class="container">
+        <div
+          id="listaVoluntarios"
+          class="grade-voluntarios"
+          aria-live="polite"
+        ></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container rodape-grid">
+      <div class="rodape-marca">
+        <img
+          src="assets/logo.jpeg"
+          alt="Logo Patrulha da Inclusão"
+        >
+      </div>
+
+      <div>
+        <h3>Links rápidos</h3>
+
+        <div class="links-duplos">
+          <a href="sobre.html">Sobre nós</a>
+          <a href="como-ajudar.html">Como ajudar</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="voluntarios.html">Voluntários</a>
+          <a href="contato.html">Contato</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <p>☎ (22) 99242-7133</p>
+        <p>☎ (22) 99871-7575</p>
+        <p>✉ patrulhadainclusaooficial@gmail.com</p>
+        <p>◎ @patrulha_da_inclusao_</p>
+      </div>
+
+      <div>
+        <h3>Siga-nos</h3>
+
+        <div class="redes">
+          <a
+            href="https://www.instagram.com/patrulha_da_inclusao/"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/logo-insta.png" alt="">
+          </a>
+
+          <a
+            href="https://www.youtube.com/@patrulha_da_inclusao"
+            aria-label="YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/logo-youtube.png" alt="">
+          </a>
+        </div>
+
+        <p class="assinatura">
+          Juntos, somos
+          <br>
+          mais fortes! ♡
+        </p>
+      </div>
+    </div>
+
+    <div class="barra-final">
+      <div class="container">
+        <span>
+          © 2026 Patrulha da Inclusão. Todos os direitos reservados.
+        </span>
+
+        <span>
+          Desenvolvido com ♡ para transformar vidas.
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de cadastro e edição de voluntário -->
+  <div
+    class="modal-voluntario"
+    id="modalVoluntario"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tituloModal"
+  >
+    <div class="modal-conteudo">
+      <div class="modal-topo">
+        <div>
+          <span class="modal-legenda">
+            Equipe
+          </span>
+
+          <h2 id="tituloModal">
+            Cadastrar voluntário
+          </h2>
+        </div>
+
+        <button
+          class="modal-fechar"
+          id="fecharModal"
+          type="button"
+          aria-label="Fechar formulário"
+        >
+          ×
+        </button>
+      </div>
+
+      <form
+        class="form-voluntario"
+        id="formVoluntario"
+      >
+        <input
+          type="hidden"
+          id="voluntarioId"
+        >
+
+        <div class="linha">
+          <label for="nome">
+            Nome
+
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              maxlength="100"
+              autocomplete="name"
+              required
+            >
+          </label>
+
+          <label for="funcao">
+            Função
+
+            <input
+              id="funcao"
+              name="funcao"
+              type="text"
+              maxlength="80"
+              required
+            >
+          </label>
+        </div>
+
+        <label for="descricao">
+          Descrição
+
+          <textarea
+            id="descricao"
+            name="descricao"
+            maxlength="260"
+            required
+          ></textarea>
+        </label>
+
+        <div class="campo-foto">
+          <label for="foto">
+            Foto
+
+            <input
+              id="foto"
+              name="foto"
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+            >
+          </label>
+
+          <div
+            class="preview-foto"
+            id="previewFoto"
+          >
+            <img
+              id="previewImagem"
+              src=""
+              alt="Pré-visualização da foto"
+            >
+          </div>
+        </div>
+
+        <div class="ajuste-foto">
+          <label for="posicaoX">
+            Ajuste horizontal
+
+            <input
+              id="posicaoX"
+              name="posicaoX"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+            >
+          </label>
+
+          <label for="posicaoY">
+            Ajuste vertical
+
+            <input
+              id="posicaoY"
+              name="posicaoY"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+            >
+          </label>
+        </div>
+
+        <div class="form-acoes">
+          <button
+            class="btn-form btn-form-secundario"
+            id="cancelarCadastro"
+            type="button"
+          >
+            Cancelar
+          </button>
+
+          <button
+            class="btn-form btn-form-primario"
+            type="submit"
+          >
+            Salvar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de autorização pelo Google Authenticator -->
+  <div
+    class="modal-voluntario"
+    id="modalAuthenticator"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tituloAuthenticator"
+  >
+    <div class="modal-conteudo modal-auth-conteudo">
+      <div class="modal-topo">
+        <div>
+          <span class="modal-legenda">
+            Área restrita
+          </span>
+
+          <h2 id="tituloAuthenticator">
+            Código do Google Authenticator
+          </h2>
+        </div>
+
+        <button
+          class="modal-fechar"
+          id="fecharAuthenticator"
+          type="button"
+          aria-label="Fechar autorização"
+        >
+          ×
+        </button>
+      </div>
+
+      <form
+        id="formAuthenticator"
+        class="form-voluntario form-auth"
+      >
+        <p>
+          Digite o código de 6 dígitos exibido no celular da
+          coordenadora.
+        </p>
+
+        <label for="codigoAuthenticator">
+          Código
+
+          <input
+            id="codigoAuthenticator"
+            name="codigoAuthenticator"
+            type="text"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            maxlength="6"
+            minlength="6"
+            pattern="[0-9]{6}"
+            placeholder="000000"
+            required
+          >
+        </label>
+
+        <p
+          id="mensagemAuthenticator"
+          class="mensagem-erro"
+          role="alert"
+          aria-live="polite"
+        ></p>
+
+        <div class="form-acoes">
+          <button
+            class="btn-form btn-form-secundario"
+            id="cancelarAuthenticator"
+            type="button"
+          >
+            Cancelar
+          </button>
+
+          <button
+            class="btn-form btn-form-primario"
+            type="submit"
+          >
+            Confirmar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="voluntarios.js"></script>
+</body>
+</html>
