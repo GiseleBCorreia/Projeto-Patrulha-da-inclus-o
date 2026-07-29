@@ -22,7 +22,6 @@
       <a href="sobre.html">Sobre nós</a>
       <a href="projetos.html">Projetos</a>
       <a href="voluntarios.html">Voluntários</a>
-      <a href="noticias.html">Notícias</a>
       <a href="como-ajudar.html">Como ajudar</a>
       <a href="contato.html" class="pagina-ativa">Contato</a>
     </nav>
@@ -45,12 +44,12 @@
       <h2 class="titulo-secao">Vamos conversar?</h2>
       <p class="texto-secao">Envie uma mensagem para saber mais sobre projetos, doações, voluntariado e parcerias.</p>
       <div class="lista-destaques">
-        <div class="card-contato"><h3>Telefone</h3><p>(21) 99797-4995</p></div>
-        <div class="card-contato"><h3>E-mail</h3><p>contato@patrulhadainclusao.org.br</p></div>
-        <div class="card-contato"><h3>Instagram</h3><p>@patrulhadainclusao</p></div>
+        <div class="card-contato"><h3>Telefone</h3><p>+55 (22) 99242-7133 <br> +55 (22) 99871-7575</p></div>
+        <div class="card-contato"><h3>E-mail</h3><p>patrulhadainclusaooficial@gmail.com</p></div>
+        <div class="card-contato"><h3>Instagram</h3><p>@patrulha_da_inclusao_</p></div>
       </div>
     </div>
-    <form class="formulario" action="#" method="post">
+    <form id="formulario-contato"class="formulario" action="https://formsubmit.co/patrulhadainclusaooficial@gmail.com" method="POST">
       <div class="linha">
         <label>Nome<input type="text" name="nome" required></label>
         <label>E-mail<input type="email" name="email" required></label>
@@ -64,7 +63,17 @@
         </select>
       </label>
       <label>Mensagem<textarea name="mensagem" required></textarea></label>
-      <button class="btn btn-primario" type="submit">Enviar mensagem</button>
+
+      
+      <input type="hidden" name="_subject" value="Nova mensagem pelo site da Patrulha da Inclusão">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <button class="btn btn-primario" type="submit">
+        Enviar mensagem
+      </button>
+
+      <p id="mensagem-formulario" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -84,7 +93,6 @@
           <a href="como-ajudar.html">Como ajudar</a>
           <a href="projetos.html">Projetos</a>
           <a href="como-ajudar.html">Seja voluntário</a>
-          <a href="noticias.html">Notícias</a>
           <a href="contato.html">Contato</a>
         </div>
       </div>
@@ -124,5 +132,6 @@
   });
 </script>
 
+<script src="scripts/contato.js"></script>
 </body>
 </html>

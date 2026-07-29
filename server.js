@@ -185,6 +185,8 @@ app.post("/api/voluntarios", exigirAdmin, exigirCsrf, upload.single("foto"), (re
   const nome = limparTexto(req.body.nome, 100);
   const funcao = limparTexto(req.body.funcao, 80);
   const descricao = limparTexto(req.body.descricao, 260);
+  const posicaoX = Number(req.body.posicaoX ?? 50);
+  const posicaoY = Number(req.body.posicaoY ?? 50);
 
   if (!nome || !funcao || !descricao) {
     if (req.file) fs.unlink(req.file.path, () => {});
@@ -193,11 +195,13 @@ app.post("/api/voluntarios", exigirAdmin, exigirCsrf, upload.single("foto"), (re
 
   const voluntarios = lerVoluntarios();
   const novo = {
-    id: crypto.randomUUID(),
-    nome,
-    funcao,
-    descricao,
-    foto: req.file ? `/uploads/${req.file.filename}` : ""
+      id: crypto.randomUUID(),
+      nome,
+      funcao,
+      descricao,
+      foto: req.file ? `/uploads/${req.file.filename}` : "",
+      posicaoX,
+      posicaoY
   };
   voluntarios.push(novo);
   salvarVoluntarios(voluntarios);
@@ -215,6 +219,15 @@ app.put("/api/voluntarios/:id", exigirAdmin, exigirCsrf, upload.single("foto"), 
   const nome = limparTexto(req.body.nome, 100);
   const funcao = limparTexto(req.body.funcao, 80);
   const descricao = limparTexto(req.body.descricao, 260);
+  const posicaoX = Math.min(
+  100,
+  Math.max(0, Number(req.body.posicaoX ?? 50))
+  );
+  const posicaoY = Math.min(
+    100,
+    Math.max(0, Number(req.body.posicaoY ?? 50))
+  );
+
   if (!nome || !funcao || !descricao) {
     if (req.file) fs.unlink(req.file.path, () => {});
     return res.status(400).json({ erro: "Preencha nome, função e descrição." });
@@ -226,7 +239,9 @@ app.put("/api/voluntarios/:id", exigirAdmin, exigirCsrf, upload.single("foto"), 
     nome,
     funcao,
     descricao,
-    foto: req.file ? `/uploads/${req.file.filename}` : anterior.foto
+    foto: req.file ? `/uploads/${req.file.filename}` : anterior.foto,
+    posicaoX,
+    posicaoY
   };
 
   if (req.file) removerUpload(anterior.foto);

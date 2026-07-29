@@ -1,9 +1,18 @@
 [
   {
     "id": "565259f5-dc6a-4ce6-878c-7ff38e35fed0",
-    "nome": "Ana",
-    "funcao": "Cozinheira",
-    "descricao": "Participa de todas as refeições com a ong.",
-    "foto": "/uploads/1784243544472-0998366e-f052-4b55-b6f6-921ef3ccf16d.jpg"
+    "nome": "Thayanne",
+    "funcao": "psicopedagoga",
+    "descricao": "Especialista em aprendizagem, autismo, TDAH e educação inclusiva",
+    "foto": "/uploads/1785355701252-a8fb8254-c85b-4b4e-a8f0-e23eee536e75.jpg"
+  },
+  {
+    "id": "63c2c1ee-fef2-4442-bf9e-9d2de4d28bb0",
+    "nome": "Miguel",
+    "funcao": "Mídia",
+    "descricao": "Cria conteúdos e divulga as ações da ONG. Apoia nas campanhas, eventos e redes socias.",
+    "foto": "/uploads/1785355921128-71a71bf1-a495-4a7d-a1b6-51136bce35fe.jpg",
+    "posicaoX": 50,
+    "posicaoY": 21
   }
 ]

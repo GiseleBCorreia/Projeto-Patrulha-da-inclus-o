@@ -6,6 +6,7 @@
   "main": "server.js",
   "scripts": {
     "setup-auth": "node scripts/setup-auth.js",
+    "recuperar-auth": "node scripts/gerar-qrcode-recuperacao.js",
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
@@ -21,4 +22,6 @@
     "multer": "^2.0.2",
     "qrcode": "^1.5.4"
   }
+
 }
+

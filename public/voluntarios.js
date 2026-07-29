@@ -8,6 +8,8 @@ const campoFuncao = document.querySelector("#funcao");
 const campoDescricao = document.querySelector("#descricao");
 const campoFoto = document.querySelector("#foto");
 const previewFoto = document.querySelector("#previewFoto");
+const posicaoXInput = document.querySelector("#posicaoX");
+const posicaoYInput = document.querySelector("#posicaoY");
 const previewImagem = document.querySelector("#previewImagem");
 
 const modalAuth = document.querySelector("#modalAuthenticator");
@@ -43,6 +45,17 @@ function obterIniciais(nome) {
     .map((parte) => parte[0]?.toUpperCase() || "")
     .join("");
 }
+
+function atualizarPosicaoFoto() {
+  const posicaoX = posicaoXInput.value;
+  const posicaoY = posicaoYInput.value;
+
+  previewImagem.style.objectPosition =
+    `${posicaoX}% ${posicaoY}%`;
+}
+
+posicaoXInput.addEventListener("input", atualizarPosicaoFoto);
+posicaoYInput.addEventListener("input", atualizarPosicaoFoto);
 
 async function requisicao(url, opcoes = {}) {
   const resposta = await fetch(url, {
@@ -121,10 +134,11 @@ function renderizarVoluntarios() {
     .map((voluntario) => {
       const foto = voluntario.foto
         ? `
-          <img
-            src="${escaparHTML(voluntario.foto)}"
-            alt="Foto de ${escaparHTML(voluntario.nome)}"
-          >
+        <img
+          src="${voluntario.foto}"
+          alt="${escaparHTML(voluntario.nome)}"
+          style="object-position: ${voluntario.posicaoX ?? 50}% ${voluntario.posicaoY ?? 50}%"
+        >
         `
         : `
           <div class="card-voluntario-placeholder" aria-hidden="true">
@@ -384,6 +398,8 @@ form?.addEventListener("submit", async (evento) => {
   dados.append("nome", campoNome.value.trim());
   dados.append("funcao", campoFuncao.value.trim());
   dados.append("descricao", campoDescricao.value.trim());
+  dados.append("posicaoX", posicaoXInput.value);
+  dados.append("posicaoY", posicaoYInput.value);
 
   if (campoFoto.files[0]) {
     dados.append("foto", campoFoto.files[0]);
