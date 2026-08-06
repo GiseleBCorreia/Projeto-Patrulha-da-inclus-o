@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Doe para a Patrulha da Inclusão por Pix e ajude a transformar vidas."
+  />
+  <title>Doação | Patrulha da Inclusão</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Pacifico&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topo">
+    <div class="container nav">
+      <a class="marca" href="index.html" aria-label="Página inicial"></a>
+
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="voluntarios.html">Voluntários</a>
+        <a href="como-ajudar.html">Como ajudar</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <a class="btn btn-doar" href="doacao.html">Doe agora</a>
+    </div>
+  </header>
+
+  <main class="pagina-doacao">
+
+    <section class="secao-doacao">
+      <div class="container">
+        <div class="cartao-doacao">
+          <div class="doacao-qr">
+            <div class="icone-coracao">♡</div>
+
+            <h2>Doe pelo Pix</h2>
+
+            <p>
+              Escaneie o QR Code usando o aplicativo do seu banco.
+            </p>
+
+            <div class="qr-code">
+              <img
+                id="imagemQr"
+                src="assets/qrcodepix.jpeg"
+                alt="QR Code para doação via Pix"
+              >
+
+              <div class="qr-placeholder" id="qrPlaceholder">
+                <strong>Adicione o QR Code oficial</strong>
+                <span>
+                  Salve a imagem do banco com o nome
+                  <code>assets/qrcode-pix.png</code>
+                </span>
+              </div>
+            </div>
+
+            <span class="doacao-segura">🔒 Doação rápida e segura</span>
+          </div>
+
+          <div class="divisor-doacao" aria-hidden="true"></div>
+
+          <div class="doacao-dados">
+            <span class="doacao-legenda">Dados para doação</span>
+
+            <h2>Contribua com qualquer valor</h2>
+
+            <p>
+              Copie a chave abaixo e faça a transferência pelo aplicativo do
+              seu banco.
+            </p>
+
+            <div class="bloco-chave">
+              <span class="rotulo-doacao">Chave Pix</span>
+
+              <div class="linha-chave">
+                <strong id="chavePix">SUA-CHAVE-PIX-AQUI</strong>
+
+                <button class="btn-copiar" id="btnCopiar" type="button">
+                  Copiar chave
+                </button>
+              </div>
+
+              <span
+                class="mensagem-copia"
+                id="mensagemCopia"
+                aria-live="polite"
+              >
+                Chave Pix copiada!
+              </span>
+            </div>
+
+            <div class="grade-dados-doacao">
+              <div class="dado-doacao">
+                <span class="rotulo-doacao">Favorecido</span>
+                <strong id="favorecido">PATRULHA DA INCLUSÃO</strong>
+              </div>
+
+              <div class="dado-doacao">
+                <span class="rotulo-doacao">Tipo da chave</span>
+                <strong id="tipoChave">CHAVE ALEATÓRIA</strong>
+              </div>
+
+              <div class="dado-doacao dado-doacao-completo">
+                <span class="rotulo-doacao">Instituição</span>
+                <strong id="banco">NOME DO BANCO</strong>
+              </div>
+            </div>
+
+            <div class="aviso-doacao">
+              <span>✓</span>
+              <p>
+                Antes de confirmar a transferência, confira se o nome do
+                favorecido está correto no aplicativo do seu banco.
+              </p>
+            </div>
+
+            <a
+              class="btn btn-primario btn-comprovante"
+              id="btnWhatsapp"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              Enviar comprovante pelo WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="agradecimento-doacao">
+          <div class="icone-coracao">♡</div>
+
+          <div>
+            <h2>Obrigada por fazer parte dessa missão!</h2>
+            <p>
+              Com a sua ajuda, conseguimos levar apoio e inclusão para mais
+              pessoas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container rodape-grid">
+      <div class="rodape-marca">
+        <img src="assets/logo.jpeg" alt="Logo Patrulha da Inclusão" />
+      </div>
+
+      <div>
+        <h3>Links rápidos</h3>
+
+        <div class="links-duplos">
+          <a href="sobre.html">Sobre nós</a>
+          <a href="como-ajudar.html">Como ajudar</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="voluntarios.html">Seja voluntário</a>
+          <a href="contato.html">Contato</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Contato</h3>
+        <p>☎ (22) 99242-7133</p>
+        <p>☎ (22) 99871-7575</p>
+        <p>✉ patrulhadainclusaooficial@gmail.com</p>
+        <p>◎ @patrulha_da_inclusao_</p>
+      </div>
+
+      <div>
+        <h3>Siga-nos</h3>
+
+        <div class="redes">
+          <a
+            href="https://www.instagram.com/patrulha_da_inclusao/"
+            aria-label="Instagram"
+          >
+            <img src="assets/logo-insta.png" alt="">
+          </a>
+
+          <a
+            href="https://www.youtube.com/@patrulha_da_inclusao"
+            aria-label="Facebook"
+          >
+            <img src="assets/logo-face.png" alt="">
+          </a>
+
+          <a href="#" aria-label="YouTube">
+            <img src="assets/logo-youtube.png" alt="">
+          </a>
+        </div>
+
+        <p class="assinatura">Juntos, somos<br>mais fortes! ♡</p>
+      </div>
+    </div>
+
+    <div class="barra-final">
+      <div class="container">
+        <span>© 2026 Patrulha da Inclusão. Todos os direitos reservados.</span>
+        <span>Desenvolvido com ♡ para transformar vidas.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="doacao.js"></script>
+</body>
+</html>

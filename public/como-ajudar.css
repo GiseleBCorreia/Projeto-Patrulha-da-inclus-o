@@ -1,0 +1,411 @@
+/* =========================================================
+   COMO AJUDAR — CSS EXCLUSIVO
+   ========================================================= */
+
+.pagina-como-ajudar .ajuda-main {
+  min-height: auto;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.7),
+      rgba(251, 246, 255, 0.7)
+    ),
+    url("./assets/backgroundsite.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.pagina-como-ajudar .ajuda-hero {
+  position: relative;
+  overflow: hidden;
+
+  /* Diminui o espaço vazio sem reduzir demais o conteúdo */
+  padding: 34px 0 24px;
+}
+
+.pagina-como-ajudar .ajuda-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  justify-items: center;
+  align-items: center;
+
+  min-height: auto;
+}
+
+.pagina-como-ajudar .ajuda-conteudo {
+  position: relative;
+  z-index: 2;
+
+  width: min(720px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* =========================================================
+   SELO
+   ========================================================= */
+
+.pagina-como-ajudar .ajuda-selo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 30px;
+  padding: 0 17px;
+
+  border-radius: 999px;
+
+  color: #fff;
+  background: var(--roxo);
+
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.pagina-como-ajudar .ajuda-titulo {
+  margin: 13px 0 0 !important;
+
+  color: var(--roxo) !important;
+
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(3rem, 4.2vw, 4.3rem) !important;
+  font-weight: 900 !important;
+
+  line-height: 0.9 !important;
+  letter-spacing: -3px !important;
+
+  text-align: center;
+}
+
+.pagina-como-ajudar .ajuda-titulo strong {
+  display: block;
+
+  margin-top: 7px;
+
+  color: var(--rosa);
+
+  font-family: "Pacifico", cursive;
+  font-size: 0.68em;
+  font-weight: 400;
+
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.pagina-como-ajudar .ajuda-conteudo > p {
+  width: min(620px, 100%);
+  margin: 20px auto 0;
+
+  color: #302947;
+
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+/* A galeria foi removida do layout */
+.pagina-como-ajudar .ajuda-galeria {
+  display: none;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.pagina-como-ajudar .ajuda-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  padding: 14px 0 38px;
+}
+
+.pagina-como-ajudar .ajuda-card {
+  min-height: 250px;
+  padding: 23px 25px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border: 1px solid #e4d8f7;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow: 0 12px 32px rgba(75, 20, 196, 0.08);
+}
+
+.pagina-como-ajudar .ajuda-icone {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 15px;
+
+  color: var(--roxo);
+  background: var(--lilas);
+
+  font-size: 1.4rem;
+}
+
+.pagina-como-ajudar .ajuda-card h2 {
+  margin: 14px 0 0;
+
+  color: var(--roxo);
+
+  font-size: 1.17rem;
+  line-height: 1.25;
+}
+
+.pagina-como-ajudar .ajuda-card p {
+  margin: 8px 0 18px;
+
+  color: #554b6a;
+
+  font-size: 0.87rem;
+  line-height: 1.58;
+}
+
+.pagina-como-ajudar .ajuda-card .btn {
+  min-height: 40px;
+  margin-top: auto;
+  padding: 0 20px;
+
+  font-size: 0.73rem;
+}
+
+/* =========================================================
+   FAIXA DE IMPACTO
+   ========================================================= */
+
+.pagina-como-ajudar .ajuda-impacto:empty {
+  display: none;
+}
+
+.pagina-como-ajudar .ajuda-faixa {
+  min-height: 96px;
+  padding: 15px 25px;
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+
+  gap: 20px;
+
+  border-radius: 20px;
+
+  background: #e3cbf8;
+}
+
+.pagina-como-ajudar .ajuda-faixa-icone {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  color: #fff;
+  background: var(--roxo);
+
+  font-size: 1.65rem;
+}
+
+.pagina-como-ajudar .ajuda-faixa h2 {
+  margin: 0;
+
+  color: var(--roxo);
+
+  font-size: clamp(1.25rem, 1.9vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.pagina-como-ajudar .ajuda-faixa p {
+  max-width: 720px;
+  margin: 5px 0 0;
+
+  color: #5d2ca9;
+
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.pagina-como-ajudar .ajuda-faixa .btn {
+  min-width: 205px;
+  min-height: 42px;
+
+  font-size: 0.73rem;
+}
+
+/* =========================================================
+   TELAS MÉDIAS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .pagina-como-ajudar .ajuda-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagina-como-ajudar .ajuda-conteudo {
+    text-align: center;
+  }
+
+  .pagina-como-ajudar .ajuda-conteudo > p {
+    margin-inline: auto;
+  }
+
+  .pagina-como-ajudar .ajuda-card {
+    padding-inline: 22px;
+  }
+
+  .pagina-como-ajudar .ajuda-faixa .btn {
+    min-width: 185px;
+  }
+}
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .pagina-como-ajudar .ajuda-main {
+    min-height: auto;
+  }
+
+  .pagina-como-ajudar .ajuda-hero {
+    padding: 36px 0 25px;
+  }
+
+  .pagina-como-ajudar .ajuda-cards {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+    padding: 14px 0 28px;
+  }
+
+  .pagina-como-ajudar .ajuda-card {
+    min-height: auto;
+  }
+
+  .pagina-como-ajudar .ajuda-faixa {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .pagina-como-ajudar .ajuda-faixa .btn {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .pagina-como-ajudar .ajuda-main {
+    background-attachment: scroll;
+  }
+
+  .pagina-como-ajudar .ajuda-hero {
+    padding: 28px 0 20px;
+  }
+
+  .pagina-como-ajudar .ajuda-conteudo {
+    align-items: center;
+    text-align: center;
+  }
+
+  .pagina-como-ajudar .ajuda-selo {
+    min-height: 28px;
+    padding-inline: 15px;
+
+    font-size: 0.68rem;
+  }
+
+  .pagina-como-ajudar .ajuda-titulo {
+    margin-top: 11px !important;
+
+    font-size: clamp(2.6rem, 13vw, 3.1rem) !important;
+    letter-spacing: -2px !important;
+  }
+
+  .pagina-como-ajudar .ajuda-titulo strong {
+    margin-top: 6px;
+  }
+
+  .pagina-como-ajudar .ajuda-conteudo > p {
+    margin-top: 17px;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .pagina-como-ajudar .ajuda-cards {
+    padding-top: 10px;
+  }
+
+  .pagina-como-ajudar .ajuda-card {
+    padding: 21px;
+  }
+
+  .pagina-como-ajudar .ajuda-icone {
+    width: 49px;
+    height: 49px;
+
+    font-size: 1.3rem;
+  }
+
+  .pagina-como-ajudar .ajuda-card h2 {
+    font-size: 1.12rem;
+  }
+
+  .pagina-como-ajudar .ajuda-card p {
+    font-size: 0.86rem;
+  }
+
+  .pagina-como-ajudar .ajuda-faixa {
+    grid-template-columns: 1fr;
+
+    padding: 22px;
+
+    text-align: center;
+  }
+
+  .pagina-como-ajudar .ajuda-faixa-icone {
+    margin-inline: auto;
+  }
+
+  .pagina-como-ajudar .ajuda-faixa .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
