@@ -11,6 +11,9 @@ const { rateLimit } = require("express-rate-limit");
 const { validarCodigo } = require("./lib/totp");
 
 const app = express();
+
+app.set("trust proxy", 1);
+
 const PORT = Number(process.env.PORT || 3000);
 const ROOT = __dirname;
 const PUBLIC_DIR = path.join(ROOT, "public");
