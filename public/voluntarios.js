@@ -537,17 +537,6 @@ botaoSairAdmin?.addEventListener("click", async () => {
   encerrarSessaoLocal();
 });
 
-if (botaoMenu && menu) {
-  botaoMenu.addEventListener("click", () => {
-    const aberto = menu.classList.toggle("aberto");
-
-    botaoMenu.setAttribute(
-      "aria-expanded",
-      String(aberto)
-    );
-  });
-}
-
 async function iniciar() {
   try {
     await carregarStatus();

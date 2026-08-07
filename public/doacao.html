@@ -17,6 +17,7 @@
   >
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile-fix.css" />
 </head>
 
 <body>
@@ -24,7 +25,7 @@
     <div class="container nav">
       <a class="marca" href="index.html" aria-label="Página inicial"></a>
 
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
         ☰
       </button>
 
@@ -34,7 +35,9 @@
         <a href="projetos.html">Projetos</a>
         <a href="voluntarios.html">Voluntários</a>
         <a href="como-ajudar.html">Como ajudar</a>
-        <a href="contato.html">Contato</a>
+<a href="doacao.html" class="pagina-ativa">Doação</a>
+
+<a href="contato.html">Contato</a>
       </nav>
 
       <a class="btn btn-doar" href="doacao.html">Doe agora</a>
@@ -160,9 +163,6 @@
 
   <footer id="contato">
     <div class="container rodape-grid">
-      <div class="rodape-marca">
-        <img src="assets/logo.jpeg" alt="Logo Patrulha da Inclusão" />
-      </div>
 
       <div>
         <h3>Links rápidos</h3>
@@ -220,5 +220,6 @@
   </footer>
 
   <script src="doacao.js"></script>
+  <script src="mobile-menu.js"></script>
 </body>
 </html>

@@ -1,0 +1,1004 @@
+/* =========================================================
+   CORREÇÕES RESPONSIVAS GERAIS — Patrulha da Inclusão
+   Carregado por último para padronizar o mobile sem afetar
+   o layout desktop existente.
+   ========================================================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  main,
+  .pagina-voluntarios,
+  .pagina-como-ajudar,
+  .pagina-sobre-home {
+    background-attachment: scroll !important;
+  }
+
+  .container,
+  .pagina-sobre .container,
+  .pagina-sobre-home .container,
+  .pagina-como-ajudar .container {
+    width: min(100% - 32px, 720px) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  /* ---------------- HEADER / MENU ---------------- */
+  .topo {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    overflow: visible !important;
+    background: rgba(255, 255, 255, .98) !important;
+  }
+
+  .nav,
+  .pagina-sobre .nav,
+  .pagina-sobre-home .nav {
+    position: relative !important;
+    min-height: 72px !important;
+    display: grid !important;
+    grid-template-columns: 58px 1fr 48px !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .marca,
+  .pagina-sobre .marca,
+  .pagina-sobre-home .marca {
+    display: block !important;
+    width: 54px !important;
+    height: 54px !important;
+    padding: 0 !important;
+    align-self: center !important;
+    background: #fff url("assets/logo.jpeg") center/contain no-repeat !important;
+    border-radius: 50% !important;
+  }
+
+  .marca img,
+  .pagina-sobre .marca img,
+  .pagina-sobre-home .marca img {
+    display: none !important;
+  }
+
+  .menu-toggle,
+  .pagina-sobre .menu-toggle,
+  .pagina-sobre-home .menu-toggle {
+    display: grid !important;
+    grid-column: 3 !important;
+    place-items: center !important;
+    justify-self: end !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    background: #f7f1ff !important;
+    color: var(--roxo) !important;
+    font: inherit !important;
+    font-size: 1.55rem !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 10002 !important;
+  }
+
+  .menu,
+  .pagina-sobre .menu,
+  .pagina-sobre-home .menu {
+    display: none !important;
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    z-index: 10001 !important;
+    width: 100% !important;
+    max-height: calc(100vh - 96px) !important;
+    overflow-y: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 4px !important;
+    padding: 12px !important;
+    border: 1px solid #eee3ff !important;
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, .99) !important;
+    box-shadow: 0 18px 45px rgba(45, 17, 105, .18) !important;
+  }
+
+  .menu.aberto,
+  .pagina-sobre .menu.aberto,
+  .pagina-sobre-home .menu.aberto {
+    display: flex !important;
+  }
+
+  .menu a,
+  .pagina-sobre .menu a,
+  .pagina-sobre-home .menu a {
+    width: 100% !important;
+    padding: 13px 14px !important;
+    border-radius: 11px !important;
+    font-size: .95rem !important;
+    text-align: left !important;
+  }
+
+  .menu a:hover,
+  .menu a.pagina-ativa,
+  .menu a.ativo {
+    background: #f7f1ff !important;
+    color: var(--roxo) !important;
+  }
+
+  .menu a::after {
+    display: none !important;
+  }
+
+  .btn-doar,
+  .pagina-sobre .btn-doar,
+  .pagina-sobre-home .btn-doar {
+    display: none !important;
+  }
+
+  /* ---------------- LAYOUT GERAL ---------------- */
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    gap: 24px !important;
+    padding-top: 40px !important;
+    padding-bottom: 46px !important;
+  }
+
+  .secao {
+    width: 100% !important;
+  }
+
+  .pagina-hero {
+    padding: 44px 0 34px !important;
+  }
+
+  .pagina-hero h1,
+  .titulo-secao {
+    overflow-wrap: anywhere;
+  }
+
+  .imagem-interna {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 260px !important;
+    aspect-ratio: 4 / 3;
+  }
+
+  .card-info,
+  .card-projeto,
+  .card-noticia,
+  .card-ajuda,
+  .card-contato {
+    min-width: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 24px !important;
+  }
+
+  .card-contato p,
+  footer p,
+  footer a {
+    overflow-wrap: anywhere !important;
+    word-break: break-word;
+  }
+
+  /* ---------------- CONTATO ---------------- */
+  .formulario {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-top: 0 !important;
+    gap: 16px !important;
+  }
+
+  .formulario .linha {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .formulario input,
+  .formulario textarea,
+  .formulario select {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .lista-destaques {
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+
+  /* ---------------- RODAPÉ ---------------- */
+  footer {
+    padding-top: 18px !important;
+  }
+
+  .rodape-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 26px !important;
+    padding: 28px 0 30px !important;
+  }
+
+  .rodape-marca {
+    display: block !important;
+  }
+
+  .rodape-marca img {
+    width: 92px !important;
+    height: 92px !important;
+    object-fit: contain !important;
+  }
+
+  .links-duplos {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 5px 18px !important;
+  }
+
+  .assinatura {
+    position: static !important;
+    margin-top: 16px !important;
+    text-align: left !important;
+  }
+
+  .barra-final .container {
+    min-height: auto !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding: 14px 0 !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .container,
+  .pagina-sobre .container,
+  .pagina-sobre-home .container,
+  .pagina-como-ajudar .container {
+    width: calc(100% - 28px) !important;
+  }
+
+  .nav,
+  .pagina-sobre .nav,
+  .pagina-sobre-home .nav {
+    min-height: 68px !important;
+    grid-template-columns: 52px 1fr 44px !important;
+  }
+
+  .marca,
+  .pagina-sobre .marca,
+  .pagina-sobre-home .marca {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .menu-toggle,
+  .pagina-sobre .menu-toggle,
+  .pagina-sobre-home .menu-toggle {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .menu,
+  .pagina-sobre .menu,
+  .pagina-sobre-home .menu {
+    top: calc(100% + 6px) !important;
+    border-radius: 15px !important;
+  }
+
+  h1,
+  .pagina-hero h1 {
+    font-size: clamp(2.25rem, 12vw, 3.1rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -1.7px !important;
+  }
+
+  .pagina-hero {
+    padding: 34px 0 26px !important;
+  }
+
+  .pagina-hero p,
+  .texto-secao {
+    font-size: .92rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .titulo-secao {
+    margin-bottom: 12px !important;
+    font-size: 1.85rem !important;
+  }
+
+  .grid-2,
+  .grid-3 {
+    gap: 20px !important;
+    padding-top: 30px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .card-info,
+  .card-projeto,
+  .card-noticia,
+  .card-ajuda,
+  .card-contato {
+    padding: 20px !important;
+    border-radius: 18px !important;
+  }
+
+  .card-contato h3 {
+    margin-top: 4px !important;
+    font-size: 1.02rem !important;
+  }
+
+  .card-contato p {
+    font-size: .82rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .formulario textarea {
+    min-height: 125px !important;
+  }
+
+  .btn:not(.menu-toggle) {
+    max-width: 100% !important;
+  }
+
+  .links-duplos {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rodape-grid {
+    gap: 22px !important;
+  }
+}
+
+/* =========================================================
+   AJUSTES EXCLUSIVOS PARA CELULAR
+   Não alteram o layout desktop.
+   ========================================================= */
+@media (max-width: 600px) {
+  /* INÍCIO: no celular, deixa somente o conteúdo textual do hero */
+  .hero .galeria {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: 34px 0 24px !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .hero-conteudo {
+    text-align: left !important;
+  }
+
+  .hero-conteudo p {
+    margin-inline: 0 !important;
+  }
+
+  .acoes {
+    justify-content: flex-start !important;
+  }
+
+  /* INÍCIO: faixa de doação mais compacta somente no celular */
+  .faixa-doacao {
+    padding: 10px 0 16px !important;
+  }
+
+  .faixa-conteudo {
+    min-height: 0 !important;
+    grid-template-columns: 42px 1fr !important;
+    gap: 10px 12px !important;
+    padding: 14px 16px !important;
+    border-radius: 16px !important;
+    text-align: left !important;
+  }
+
+  .faixa-conteudo .icone-coracao {
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    font-size: 1.35rem !important;
+  }
+
+  .faixa-conteudo h2 {
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .faixa-conteudo p {
+    margin-top: 4px !important;
+    font-size: .76rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .faixa-conteudo .btn {
+    grid-column: 1 / -1 !important;
+    width: auto !important;
+    min-height: 38px !important;
+    justify-self: stretch !important;
+    padding: 0 16px !important;
+    font-size: .78rem !important;
+  }
+}
+
+
+/* =========================================================
+   AJUSTES MOBILE V3 — Voluntários e Sobre
+   Somente celular. Desktop permanece inalterado.
+   ========================================================= */
+@media (max-width: 600px) {
+  /* VOLUNTÁRIOS: garante que o cabeçalho/menu fique clicável acima de tudo */
+  body:has(.pagina-voluntarios) .topo {
+    z-index: 20000 !important;
+  }
+
+  body:has(.pagina-voluntarios) .nav,
+  body:has(.pagina-voluntarios) .menu-toggle,
+  body:has(.pagina-voluntarios) .menu {
+    pointer-events: auto !important;
+  }
+
+  body:has(.pagina-voluntarios) .menu.aberto {
+    display: flex !important;
+    z-index: 20002 !important;
+  }
+
+  /* VOLUNTÁRIOS: hero mais curto para mostrar a equipe mais cedo */
+  .pagina-voluntarios .hero-voluntarios {
+    padding: 24px 0 20px !important;
+  }
+
+  .pagina-voluntarios .hero-voluntarios-conteudo {
+    gap: 8px !important;
+  }
+
+  .pagina-voluntarios .hero-voluntarios-etiqueta {
+    margin-bottom: 2px !important;
+    font-size: .72rem !important;
+  }
+
+  .pagina-voluntarios .hero-voluntarios p {
+    margin: 6px auto 0 !important;
+    max-width: 300px !important;
+    font-size: .75rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .pagina-voluntarios .hero-voluntarios p br {
+    display: none !important;
+  }
+
+  .pagina-voluntarios .status-admin {
+    min-height: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* VOLUNTÁRIOS: 2 cards por linha no celular */
+  .pagina-voluntarios .secao-equipe .container {
+    width: calc(100% - 20px) !important;
+  }
+
+  .pagina-voluntarios .grade-voluntarios {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    align-items: stretch !important;
+  }
+
+  .pagina-voluntarios .card-voluntario {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 12px 8px 13px !important;
+    border-radius: 15px !important;
+  }
+
+  .pagina-voluntarios .card-voluntario-foto {
+    width: 74px !important;
+    height: 74px !important;
+    margin-bottom: 8px !important;
+    padding: 2px !important;
+    border-width: 2px !important;
+  }
+
+  .pagina-voluntarios .card-voluntario h3 {
+    font-size: .82rem !important;
+    line-height: 1.15 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .pagina-voluntarios .card-voluntario .funcao {
+    margin: 4px 0 6px !important;
+    font-size: .52rem !important;
+    line-height: 1.2 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .pagina-voluntarios .card-voluntario .descricao {
+    font-size: .61rem !important;
+    line-height: 1.4 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .pagina-voluntarios .card-voluntario-acoes {
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+    margin-top: 8px !important;
+  }
+
+  .pagina-voluntarios .btn-card {
+    min-height: 26px !important;
+    padding: 0 7px !important;
+    font-size: .52rem !important;
+  }
+
+  .pagina-voluntarios .btn-cadastro-flutuante {
+    right: 14px !important;
+    bottom: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 1.6rem !important;
+  }
+
+  /* SOBRE: remove a foto somente no celular */
+  .pagina-sobre-home .sobre-home-galeria {
+    display: none !important;
+  }
+
+  .pagina-sobre-home .sobre-home-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE V5 — ajuste fino da Home + Projetos
+   Mantém o visual da V3. Somente celular.
+   ========================================================= */
+@media (max-width: 600px) {
+  /* HOME: mantém o layout anterior, só recupera altura suficiente
+     para a faixa de doação aparecer inteira na primeira tela. */
+  #inicio .hero {
+    padding: 22px 0 12px !important;
+  }
+
+  #inicio .hero h1 {
+    margin-top: 12px !important;
+  }
+
+  #inicio .hero h1 span {
+    margin-top: 5px !important;
+    margin-bottom: 6px !important;
+  }
+
+  #inicio .hero-conteudo p {
+    margin-top: 16px !important;
+    line-height: 1.55 !important;
+  }
+
+  #inicio .acoes {
+    margin-top: 16px !important;
+    gap: 8px !important;
+  }
+
+  #inicio .acoes .btn {
+    min-height: 42px !important;
+  }
+
+  #inicio .faixa-doacao {
+    padding: 6px 0 10px !important;
+  }
+
+  /* A faixa continua com o mesmo estilo, mas em uma única linha
+     compacta para caber inteira sem precisar descer a tela. */
+  #inicio .faixa-conteudo {
+    grid-template-columns: 38px minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+    text-align: left !important;
+  }
+
+  #inicio .faixa-conteudo .icone-coracao {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.15rem !important;
+  }
+
+  #inicio .faixa-conteudo h2 {
+    font-size: .82rem !important;
+    line-height: 1.15 !important;
+  }
+
+  #inicio .faixa-conteudo p {
+    margin-top: 2px !important;
+    font-size: .60rem !important;
+    line-height: 1.25 !important;
+  }
+
+  #inicio .faixa-conteudo .btn {
+    grid-column: auto !important;
+    width: auto !important;
+    min-height: 32px !important;
+    padding: 0 9px !important;
+    font-size: .58rem !important;
+    white-space: nowrap !important;
+  }
+
+  /* PROJETOS: remove apenas no celular a faixa roxa final. */
+  body:has(a[href="projetos.html"].pagina-ativa) .cta-interna {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE V7 — Página de Doação
+   Apenas celular. Desktop permanece inalterado.
+   ========================================================= */
+@media (max-width: 600px) {
+  /* Menu da página de doação sempre acima do cartão */
+  body:has(.pagina-doacao) .topo {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 30000 !important;
+  }
+
+  body:has(.pagina-doacao) .menu-toggle {
+    position: relative !important;
+    z-index: 30002 !important;
+    pointer-events: auto !important;
+  }
+
+  body:has(.pagina-doacao) .menu.aberto {
+    display: flex !important;
+    z-index: 30001 !important;
+    pointer-events: auto !important;
+  }
+
+  /* O conteúdo útil da doação aparece já na primeira tela */
+  .pagina-doacao .secao-doacao {
+    padding: 8px 0 12px !important;
+  }
+
+  .pagina-doacao .secao-doacao > .container {
+    width: calc(100% - 20px) !important;
+  }
+
+  .pagina-doacao .cartao-doacao {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 14px 12px !important;
+    display: grid !important;
+    grid-template-columns: 112px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: start !important;
+    border-radius: 18px !important;
+  }
+
+  .pagina-doacao .divisor-doacao {
+    display: none !important;
+  }
+
+  .pagina-doacao .doacao-qr,
+  .pagina-doacao .doacao-dados {
+    min-width: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .pagina-doacao .doacao-qr .icone-coracao {
+    width: 34px !important;
+    height: 34px !important;
+    margin: 0 auto 6px !important;
+    font-size: 1rem !important;
+  }
+
+  .pagina-doacao .doacao-qr h2 {
+    font-size: .9rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .pagina-doacao .doacao-qr > p {
+    margin-top: 4px !important;
+    font-size: .58rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .pagina-doacao .qr-code {
+    width: 108px !important;
+    margin-top: 8px !important;
+    padding: 6px !important;
+    border-radius: 13px !important;
+  }
+
+  .pagina-doacao .qr-code img {
+    border-radius: 7px !important;
+  }
+
+  .pagina-doacao .doacao-segura {
+    margin-top: 6px !important;
+    font-size: .5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .pagina-doacao .doacao-legenda {
+    margin: 0 0 4px !important;
+    font-size: .53rem !important;
+  }
+
+  .pagina-doacao .doacao-dados h2 {
+    font-size: 1rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .pagina-doacao .doacao-dados > p {
+    display: none !important;
+  }
+
+  .pagina-doacao .bloco-chave {
+    margin-top: 8px !important;
+    padding: 9px !important;
+    border-radius: 12px !important;
+  }
+
+  .pagina-doacao .rotulo-doacao {
+    margin-bottom: 3px !important;
+    font-size: .49rem !important;
+  }
+
+  .pagina-doacao .linha-chave {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+
+  .pagina-doacao .linha-chave strong {
+    font-size: .64rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .pagina-doacao .btn-copiar {
+    width: 100% !important;
+    min-height: 28px !important;
+    padding: 0 8px !important;
+    font-size: .54rem !important;
+  }
+
+  .pagina-doacao .mensagem-copia {
+    margin-top: 4px !important;
+    font-size: .52rem !important;
+  }
+
+  .pagina-doacao .grade-dados-doacao {
+    grid-template-columns: 1fr !important;
+    gap: 5px !important;
+    margin-top: 7px !important;
+  }
+
+  .pagina-doacao .dado-doacao {
+    padding: 7px 8px !important;
+    border-radius: 9px !important;
+  }
+
+  .pagina-doacao .dado-doacao strong {
+    font-size: .58rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* No mobile, tipo da chave e banco são informação secundária.
+     A chave e o favorecido continuam visíveis imediatamente. */
+  .pagina-doacao .grade-dados-doacao .dado-doacao:nth-child(2),
+  .pagina-doacao .grade-dados-doacao .dado-doacao:nth-child(3) {
+    display: none !important;
+  }
+
+  .pagina-doacao .aviso-doacao {
+    margin-top: 7px !important;
+    padding: 7px 8px !important;
+    gap: 6px !important;
+    border-radius: 9px !important;
+    font-size: .51rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .pagina-doacao .aviso-doacao span {
+    width: 17px !important;
+    height: 17px !important;
+    font-size: .5rem !important;
+  }
+
+  .pagina-doacao .btn-comprovante {
+    min-height: 30px !important;
+    margin-top: 7px !important;
+    padding: 0 8px !important;
+    font-size: .52rem !important;
+    line-height: 1.15 !important;
+    text-align: center !important;
+  }
+
+  /* Agradecimento não compete com a ação principal na primeira tela */
+  .pagina-doacao .agradecimento-doacao {
+    margin-top: 8px !important;
+    padding: 8px 10px !important;
+    gap: 8px !important;
+    border-radius: 12px !important;
+  }
+
+  .pagina-doacao .agradecimento-doacao .icone-coracao {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: .9rem !important;
+  }
+
+  .pagina-doacao .agradecimento-doacao h2 {
+    font-size: .68rem !important;
+  }
+
+  .pagina-doacao .agradecimento-doacao p {
+    margin-top: 2px !important;
+    font-size: .5rem !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE V8 — ajustes finais: Doação + carrossel de Projetos
+   Somente celular. Desktop permanece inalterado.
+   ========================================================= */
+@media (max-width: 600px) {
+  /* DOAÇÃO: elimina o espaço artificial entre o conteúdo e o rodapé.
+     A regra original min-height:100vh fazia o <main> ocupar uma tela
+     inteira mesmo quando o conteúdo terminava antes. */
+  .pagina-doacao {
+    min-height: auto !important;
+  }
+
+  .pagina-doacao .secao-doacao {
+    padding-bottom: 10px !important;
+  }
+
+  .pagina-doacao + footer,
+  body:has(.pagina-doacao) footer {
+    margin-top: 0 !important;
+  }
+
+  /* PROJETOS: cards viram carrossel horizontal com um pedaço do
+     próximo card visível, deixando claro que é possível arrastar. */
+  body:has(a[href="projetos.html"].pagina-ativa) .secao:first-of-type .grid-3 {
+    display: grid !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: 82% !important;
+    gap: 12px !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 0 34px 16px 0 !important;
+    scroll-snap-type: x mandatory !important;
+    scroll-padding-left: 0 !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-inline: contain !important;
+    scrollbar-width: none !important;
+  }
+
+  body:has(a[href="projetos.html"].pagina-ativa) .secao:first-of-type .grid-3::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  body:has(a[href="projetos.html"].pagina-ativa) .secao:first-of-type .card-projeto {
+    scroll-snap-align: start !important;
+    height: auto !important;
+    min-width: 0 !important;
+    padding: 14px !important;
+    border-radius: 18px !important;
+  }
+
+  /* Mostra a fotografia inteira. A regra desktop usa object-fit:cover,
+     que estava recortando topo/laterais das artes. */
+  body:has(a[href="projetos.html"].pagina-ativa) .secao:first-of-type .card-projeto img {
+    width: 100% !important;
+    height: 180px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin-bottom: 10px !important;
+    border-radius: 13px !important;
+    background: #fff !important;
+  }
+
+  body:has(a[href="projetos.html"].pagina-ativa) .secao:first-of-type .card-projeto h3 {
+    margin: 8px 0 7px !important;
+    font-size: 1rem !important;
+  }
+
+  body:has(a[href="projetos.html"].pagina-ativa) .secao:first-of-type .card-projeto p {
+    font-size: .78rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE V9 — CARROSSEL DE PROJETOS CORRIGIDO
+   O seletor da V8 não atingia a grade porque a primeira <section>
+   da página é o hero. Estas regras sobrescrevem a V8 somente no mobile.
+   ========================================================= */
+@media (max-width: 600px) {
+  /* A grade de projetos vira uma faixa horizontal rolável. */
+  body:has(.menu a[href="projetos.html"].pagina-ativa) main .grid-3 {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    /* deixa espaço suficiente para enxergar o próximo card */
+    padding: 0 54px 14px 0 !important;
+
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior-x: contain !important;
+    scrollbar-width: none !important;
+  }
+
+  body:has(.menu a[href="projetos.html"].pagina-ativa) main .grid-3::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  body:has(.menu a[href="projetos.html"].pagina-ativa) main .grid-3 > .card-projeto {
+    flex: 0 0 76% !important;
+    width: 76% !important;
+    min-width: 76% !important;
+    max-width: 76% !important;
+    height: auto !important;
+
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+
+    padding: 12px !important;
+    border-radius: 18px !important;
+  }
+
+  /* A imagem é exibida inteira dentro de uma moldura fixa, sem crop. */
+  body:has(.menu a[href="projetos.html"].pagina-ativa) main .grid-3 > .card-projeto img {
+    display: block !important;
+    width: 100% !important;
+    height: 150px !important;
+    max-height: 150px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    margin: 0 0 10px !important;
+    border-radius: 13px !important;
+    background: #fff !important;
+  }
+
+  body:has(.menu a[href="projetos.html"].pagina-ativa) main .grid-3 > .card-projeto h3 {
+    margin: 4px 0 6px !important;
+    font-size: .96rem !important;
+    line-height: 1.2 !important;
+  }
+
+  body:has(.menu a[href="projetos.html"].pagina-ativa) main .grid-3 > .card-projeto p {
+    font-size: .72rem !important;
+    line-height: 1.45 !important;
+  }
+}

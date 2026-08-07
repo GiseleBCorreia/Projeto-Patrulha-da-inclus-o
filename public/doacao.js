@@ -21,9 +21,6 @@ const btnWhatsapp = document.getElementById("btnWhatsapp");
 const imagemQr = document.getElementById("imagemQr");
 const qrPlaceholder = document.getElementById("qrPlaceholder");
 
-const botaoMenu = document.querySelector(".menu-toggle");
-const menu = document.querySelector(".menu");
-
 chavePix.textContent = dadosPix.chave;
 favorecido.textContent = dadosPix.favorecido;
 tipoChave.textContent = dadosPix.tipoChave;
@@ -73,19 +70,4 @@ function mostrarMensagemCopia() {
 imagemQr.addEventListener("error", () => {
   imagemQr.style.display = "none";
   qrPlaceholder.style.display = "grid";
-});
-
-botaoMenu.addEventListener("click", () => {
-  const aberto = menu.classList.toggle("aberto");
-
-  botaoMenu.setAttribute("aria-expanded", String(aberto));
-  botaoMenu.textContent = aberto ? "✕" : "☰";
-});
-
-menu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("aberto");
-    botaoMenu.setAttribute("aria-expanded", "false");
-    botaoMenu.textContent = "☰";
-  });
 });

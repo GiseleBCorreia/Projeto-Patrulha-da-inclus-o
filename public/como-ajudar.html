@@ -21,6 +21,7 @@
 
   <!-- CSS exclusivo desta página -->
   <link rel="stylesheet" href="como-ajudar.css" />
+  <link rel="stylesheet" href="mobile-fix.css" />
 </head>
 
 <body class="pagina-como-ajudar">
@@ -39,7 +40,9 @@
         <a href="projetos.html">Projetos</a>
         <a href="voluntarios.html">Voluntários</a>
         <a href="como-ajudar.html" class="pagina-ativa">Como ajudar</a>
-        <a href="contato.html">Contato</a>
+<a href="doacao.html">Doação</a>
+
+<a href="contato.html">Contato</a>
       </nav>
 
       <a class="btn btn-doar" href="doacao.html">Doe agora</a>
@@ -109,9 +112,6 @@
 
   <footer id="contato">
     <div class="container rodape-grid">
-      <div class="rodape-marca">
-        <img src="assets/logo.jpeg" alt="Logo Patrulha da Inclusão" />
-      </div>
 
       <div>
         <h3>Links rápidos</h3>
@@ -156,16 +156,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const botao = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".menu");
-
-    botao.addEventListener("click", () => {
-      const aberto = menu.classList.toggle("aberto");
-      botao.setAttribute("aria-expanded", String(aberto));
-    });
-  </script>
-
+  <script src="mobile-menu.js"></script>
 </body>
 </html>

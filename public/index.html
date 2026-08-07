@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile-fix.css" />
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <div class="container nav">
       <a class="marca" href="index.html" aria-label="Página inicial"></a>
 
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
       <nav class="menu">
         <a class="ativo" href="index.html">Início</a>
@@ -24,7 +25,9 @@
         <a href="projetos.html">Projetos</a>
         <a href="voluntarios.html">Voluntários</a>
         <a href="como-ajudar.html">Como ajudar</a>
-        <a href="contato.html">Contato</a>
+<a href="doacao.html">Doação</a>
+
+<a href="contato.html">Contato</a>
       </nav>
 
       <a class="btn btn-doar" href="doacao.html">Doe agora</a>
@@ -84,9 +87,6 @@
 
   <footer id="contato">
     <div class="container rodape-grid">
-      <div class="rodape-marca">
-        <img src="assets/logo.jpeg" alt="Logo Patrulha da Inclusão" />
-      </div>
 
       <div>
         <h3>Links rápidos</h3>
@@ -125,15 +125,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const botao = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
-
-    botao.addEventListener('click', () => {
-      const aberto = menu.classList.toggle('aberto');
-      botao.setAttribute('aria-expanded', aberto);
-    });
-  </script>
+  <script src="mobile-menu.js"></script>
 </body>
 </html>
