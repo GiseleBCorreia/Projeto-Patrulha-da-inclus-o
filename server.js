@@ -97,7 +97,8 @@ app.use(
         ],
 
         connectSrc: [
-          "'self'"
+          "'self'",
+          "https://formsubmit.co"
         ],
 
         objectSrc: [
