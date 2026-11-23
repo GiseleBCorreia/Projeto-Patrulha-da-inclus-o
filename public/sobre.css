@@ -1,3 +1,4 @@
+
 /* =========================================================
    SOBRE NÓS — CSS EXCLUSIVO
    ========================================================= */
@@ -121,6 +122,9 @@
   object-position: center !important;
 }
 
+/* =========================================================
+   CARDS — MISSÃO, VISÃO E VALORES
+   ========================================================= */
 
 .pagina-sobre-home .sobre-home-pilares {
   padding: 15px 0 70px;
@@ -147,10 +151,12 @@
   box-shadow: 0 20px 44px rgba(75,20,196,.13);
 }
 
+/* Alinhamento do número e do ícone */
 .pagina-sobre-home .sobre-home-card-topo {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 54px;
 }
 
 .pagina-sobre-home .sobre-home-card-numero {
@@ -160,12 +166,47 @@
   font-weight: 900;
 }
 
+/* Caixa lilás dos ícones */
+.pagina-sobre-home .sobre-home-card-topo .icone-pagina {
+  width: 54px !important;
+  height: 54px !important;
+  min-width: 54px;
+  padding: 0 !important;
+  border-radius: 17px;
+  background: #eadcff;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* PNGs — área de exibição padronizada */
+
+.pagina-sobre-home .sobre-home-card-topo .icone-pagina img {
+  width: 30px !important;
+  height: 30px !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Títulos dos cards */
 .pagina-sobre-home .sobre-home-card h2 {
   margin-top: 22px;
   color: var(--roxo);
   font-size: 1.35rem;
 }
 
+/* Textos dos cards */
 .pagina-sobre-home .sobre-home-card p {
   margin-top: 13px;
   color: #554b6a;
@@ -173,10 +214,14 @@
   font-size: .92rem;
 }
 
+/* Faixa inferior */
 .pagina-sobre-home .sobre-home-faixa {
   padding: 20px 0 25px;
 }
 
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
 
 @media (max-width: 1100px) {
   .pagina-sobre-home .sobre-home-grid {
