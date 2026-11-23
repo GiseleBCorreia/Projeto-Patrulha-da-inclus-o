@@ -172,6 +172,20 @@
   font-size: 1.4rem;
 }
 
+.pagina-como-ajudar .ajuda-icone img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Aumenta somente o ícone de parceria */
+.pagina-como-ajudar .ajuda-card:nth-child(3) .ajuda-icone img {
+  width: 80px;
+  height: 40px;
+  object-fit: contain;
+}
+
 .pagina-como-ajudar .ajuda-card h2 {
   margin: 14px 0 0;
 
@@ -408,4 +422,14 @@
     width: 100%;
     min-width: 0;
   }
+  .pagina-como-ajudar .ajuda-icone img {
+  width: 28px;
+  height: 28px;
+  }
+  .pagina-como-ajudar .ajuda-card:nth-child(3) .ajuda-icone img {
+  width: 40px;
+  height: 40px;
+  }
+
+
 }
