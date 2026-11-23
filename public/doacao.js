@@ -4,10 +4,10 @@
   SUBSTITUA OS DADOS ABAIXO PELOS DADOS REAIS DA ONG.
 */
 const dadosPix = {
-  chave: "patrulhadainclusaooficial@gmail.com",
-  favorecido: "Camila Santiago Bento de Mesquita",
-  tipoChave: "E-MAIL",
-  banco: "NuBank",
+  chave: "68.727.769/0001-40",
+  favorecido: "Patrulha da Inclusão",
+  tipoChave: "CNPJ",
+  banco: "Mercado Pago",
   whatsapp: "+5522992427133"
 };
 
